@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="header">
+        <img height="140px" class="img-responsive col-md-12 p-0" src="img/header.png"  alt="">
+    </div>
+
+    <div id="loader" class="row" >
+        <div class="col-xs-6 p-0" id="left">
+            <img class="img-responsive col-md-12 p-0" src="img/left-blind.png" alt="">
+        </div>
+        <div class="col-xs-6 p-0 " id="div2">
+            <img class="img-responsive col-md-12 p-0"  src="img/right-blind.png" alt="">
+        </div>
+        <button id="animation-begin">Click Me</button>
+    </div>
+
+<div id="content" style="z-index: 12" >
+    <img class="img-responsive col-md-12 p-0"   src="img/background.jpg" alt="">
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+    $( "#animation-begin" ).click(function() {
+
+        (function () {
+        $( "#left img" ).animate({ right: "100%" }, { duration: 3000});
+        $( "#div2 img" ).animate({ left: "100%" }, { duration: 2800 });
+
+
+//        $( "#div1 " ).animate({
+//            right:'0',
+//            width: ''
+//        }, {
+//            duration: 1000,
+////            easing: "easein"
+//        });
+//
+//        $( "#div2 " ).animate({
+//                width: '',
+//                left:'0'
+//            }, {
+//                duration: 1000,
+////                easing: "easein"
+//            });
+
+            $( "#animation-begin" ).fadeTo( "slow" , 0)
+            setTimeout(function(){
+                $( "#div2 img" ).hide();
+            }, 3000);
+        })();
+    });
+</script>
+</body>
+</html>

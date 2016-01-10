@@ -1,0 +1,48 @@
+#wrapper {
+    height: 100vh;
+}
+
+#header {
+    position: absolute;
+    top:0;
+    height: 140px;
+    z-index: 200;
+}
+
+#header img {
+    height: 140px;
+}
+
+#loader {
+    position: absolute;
+    top: 120px;
+    z-index: 100;
+}
+
+#loader img {
+    height: 80vh; padding-left: 5px
+}
+
+#content{
+    position: relative;
+    top: 120px;
+}
+
+#content img {
+    height: 82vh;
+}
+
+#animation-begin {
+    position: absolute;
+    z-index: 10;
+    top: 65%;
+    left: 45%;
+    width: 10%;
+}
+
+
+.p-0 {
+    padding: 0;
+}
+
+
